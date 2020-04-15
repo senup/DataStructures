@@ -1,4 +1,4 @@
-import com.sun.deploy.util.StringUtils;
+package day01_Array;
 
 public class Main {
 
@@ -43,7 +43,7 @@ public class Main {
 //
 //
 //
-//        Array array = new Array(20);
+//        day01_Array.Array array = new day01_Array.Array(20);
 //        for(int i=0;i<10;i++){
 //            array.addLast(i);
 //        }

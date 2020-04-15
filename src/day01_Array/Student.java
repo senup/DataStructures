@@ -1,3 +1,5 @@
+package day01_Array;
+
 public class Student {
 
     private String name;
@@ -5,7 +7,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "day01_Array.Student{" +
                 "name='" + name + '\'' +
                 ", score=" + score +
                 '}';

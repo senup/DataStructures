@@ -1,4 +1,4 @@
-
+package day01_Array;
 
 public class Array<E> {
     //声明数组
@@ -40,7 +40,7 @@ public class Array<E> {
 //    public void addLast(int e){
 //        //由于是往后插入数值，那么对数组越界做异常处理
 //        if(size==data.length)
-//            throw new IllegalStateException("AddLast failed.Array is full~");
+//            throw new IllegalStateException("AddLast failed.day01_Array.Array is full~");
 //        //思路是根据size元素个数来赋值，同时size后移一位
 //        data[size]=e;
 //        size++;
@@ -170,7 +170,7 @@ public class Array<E> {
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
-        res.append(String.format("Array: size = %d , capacity = %d\n", size, data.length));
+        res.append(String.format("day01_Array.Array: size = %d , capacity = %d\n", size, data.length));
         res.append('[');
         for(int i=0;i<size;i++){
             res.append(data[i]);
