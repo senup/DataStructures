@@ -69,4 +69,47 @@ public class LinkedList<E> {
     public void addLast(E e){
         add(size, e);
     }
+
+
+    //获得链表的第index个位置的元素
+    //在链表中不是一个常用的操作 练习用
+    public E get(int index){
+        if(index<0 || index>= size){
+            throw new IllegalArgumentException("get failed because of illegal index;");
+        }
+        Node cur = dummyHead.next;
+        for(int i=0;i<index;i++){
+            cur=cur.next;
+        }
+        return cur.e;
+    }
+
+    //查找链表中是否有元素e
+    public boolean contains(E e){
+        Node cur= dummyHead.next;
+        while(cur!=null){
+            if(cur.e.equals(e)){
+                return true;
+            }
+            cur=cur.next;
+        }
+        return false;
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder res = new StringBuilder();
+        //从链表头开始遍历
+//        Node cur = dummyHead.next;
+//        while(cur != null){
+//            res.append(cur+"->");
+//            cur=cur.next;
+//        }
+//        res.append("null");
+        for(Node cur= dummyHead.next;cur!=null;cur=cur.next)
+            res.append(cur+"->");
+        res.append("null");
+        return res.toString();
+    }
 }
