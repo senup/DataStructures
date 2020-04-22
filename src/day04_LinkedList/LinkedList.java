@@ -96,6 +96,52 @@ public class LinkedList<E> {
         return false;
     }
 
+    //从链表中删除index位置的元素，返回该元素
+    public E remove(int index){
+        if(index<0 || index >=size){
+            throw new IllegalArgumentException("remove failed because of illegal index~");
+        }
+        Node prev= dummyHead;
+        for(int i=0;i<index;i++){
+            prev=prev.next;
+        }
+        Node retNode = prev.next;
+        prev.next=retNode.next;
+        retNode.next=null;
+        size--;
+        return retNode.e;
+    }
+
+    //从链表中删除第一个元素，返回该元素
+    public E removeFirst(){
+        return remove(0);
+    }
+
+    //从链表中删除最后一个元素，返回该元素
+    public E removeLast(){
+        return remove(size-1);
+    }
+
+    //从链表中删除某个元素
+    //思路是先找到该元素在执行删除
+    public void removeElement(E e){
+        Node prev= dummyHead;
+        while(prev.next!=null){
+            if(prev.next.e.equals(e)){
+                break;
+            }
+            prev=prev.next;
+        }
+
+        if(prev.next!=null){
+            Node delNode= prev.next;
+            prev.next=delNode.next;
+            delNode.next=null;
+            size--;
+        }
+    }
+
+
 
     @Override
     public String toString() {

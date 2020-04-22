@@ -12,5 +12,11 @@ public class Test {
         boolean res = list.contains(99);
         System.out.println(res);
         System.out.println(list.getSize());
+        list.add(2,222222);
+        System.out.println(list);
+        list.remove(2);
+        list.removeFirst();
+        list.removeLast();
+        System.out.println(list);
     }
 }
