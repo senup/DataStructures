@@ -5,12 +5,18 @@ import java.util.Random;
 public class Test {
     public static void main(String[] args) {
         int opCount=100000;
+
         ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
         double time1 = testQueue(arrayQueue, opCount);
         System.out.println("arrayQueue runTime: "+time1+"s");
+
         LoopQueue<Integer> loopQueue = new LoopQueue<>();
         double time2 = testQueue(loopQueue, opCount);
         System.out.println("loopQueue runTime: "+time2+"s");
+
+        LinkedListQueue<Integer> linkedListQueue = new LinkedListQueue<>();
+        double time3 = testQueue(linkedListQueue, opCount);
+        System.out.println("loopQueue runTime: "+time3+"s");
 
     }
 
