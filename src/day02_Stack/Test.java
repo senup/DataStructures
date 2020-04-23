@@ -1,4 +1,4 @@
-package day02_stack;
+package day02_Stack;
 
 import java.util.Random;
 

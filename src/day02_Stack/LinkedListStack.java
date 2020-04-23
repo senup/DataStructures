@@ -1,4 +1,4 @@
-package day02_stack;
+package day02_Stack;
 
 public class LinkedListStack<E> implements Stack<E> {
     private LinkedList<E> list;

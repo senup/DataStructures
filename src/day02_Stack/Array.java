@@ -1,4 +1,4 @@
-package day02_stack;
+package day02_Stack;
 
 public class Array<E> {
     //声明数组

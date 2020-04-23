@@ -1,4 +1,4 @@
-package day02_stack;
+package day02_Stack;
 
 public class LinkedList<E> {
     /*这里可以看到内部类Node为private是不暴露细节给外部的
